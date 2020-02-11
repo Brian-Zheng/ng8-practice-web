@@ -23,7 +23,7 @@
 </div>
 
 <form>
-  <ng-container>
+  <ng-container *ngIf="didSelected(sendType.EMAIL); else addressArea">
     <p class="full">
       <label for="email">電子郵件信箱</label>
       <input type="email" id="email" placeholder="example@email.com">
@@ -34,6 +34,34 @@
       <input type="text" id="company-code" placeholder="12345678">
     </p>
   </ng-container>
+  <ng-template #addressArea>
+    <form>
+      <p class="address full">
+        <label for="address">地址</label>
+        <select name="city" id="city">
+          <option value="高雄市">高雄市</option>
+        </select>
+
+        <select class="float-right" name="county" id="county">
+          <option value="新興區">新興區</option>
+        </select>
+
+        <input type="text" id="address" placeholder="幸福路 520 號">
+
+        <span class="same-checkbox">
+          <input type="checkbox" name="same-address" id="same-address">
+          <label for="same-address">同運送地址</label>
+        </span>
+
+      </p>
+
+      <p class="full">
+        <label for="company-code">統一編號（選填）</label>
+        <input type="text" id="company-code" placeholder="12345678">
+      </p>
+
+    </form>
+  </ng-template>
 </form>
 
 <p class="full button"><a [routerLink]="['/', path.success]">確認結帳</a></p>
