@@ -1,0 +1,40 @@
+<!-- 導覽列區域開始 -->
+<header class="font-dark-green">
+
+  <!-- Logo 區域開始 -->
+  <a href="javascript:;" class="desktop">
+    <img src="assets/images/logo/logo-all-dark.svg" alt="Sweetaste 的 Logo">
+  </a>
+
+  <a href="javascript:;" class="mobile">
+    <img src="assets/images/logo/logotype.svg" alt="Sweetaste 的 Logo">
+  </a>
+  <!-- Logo 區域結束 -->
+
+  <!-- 選單區域開始 -->
+  <nav class="desktop">
+    <ul>
+      <li><a [routerLink]="[path.home]">首頁</a></li>
+      <li><a [routerLink]="[path.products]">甜點</a></li>
+      <li><a [routerLink]="[path.login]">登入</a></li>
+    </ul>
+  </nav>
+
+  <nav class="mobile">
+    <i class="material-icons">menu</i>
+    <ul>
+      <li><a [routerLink]="[path.home]">首頁</a></li>
+      <li><a [routerLink]="[path.products]">甜點</a></li>
+      <li><a [routerLink]="[path.login]">登入</a></li>
+    </ul>
+  </nav>
+  <!-- 選單區域結束 -->
+
+  <!-- 購物車icon區域開始 -->
+  <a [routerLink]="[path.cart]" class="cart">
+    <i class="material-icons">shopping_cart</i>
+  </a>
+  <!-- 購物車icon區域結束 -->
+
+</header>
+<!-- 導覽列區域結束 -->
