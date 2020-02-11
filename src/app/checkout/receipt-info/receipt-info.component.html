@@ -1,1 +1,41 @@
-<p>receipt-info works!</p>
+<div class="title">
+  <h2>發票</h2>
+  <p class="progress">
+    <i class="material-icons">check_circle</i>
+    <i class="material-icons">check_circle</i>
+    <i class="material-icons">radio_button_checked</i>
+  </p>
+</div>
+
+<div class="segment font-light-green">
+  <ul>
+    <li [class.selected]="didSelected(sendType.EMAIL)">
+      <a href="javascript:;" (click)="switchType(sendType.EMAIL)">
+        電子發票
+      </a>
+    </li>
+    <li [class.selected]="didSelected(sendType.ADDRESS)">
+      <a href="javascript:;" (click)="switchType(sendType.ADDRESS)">
+        郵寄發票
+      </a>
+    </li>
+  </ul>
+</div>
+
+<form>
+  <ng-container>
+    <p class="full">
+      <label for="email">電子郵件信箱</label>
+      <input type="email" id="email" placeholder="example@email.com">
+    </p>
+
+    <p class="full">
+      <label for="company-code">統一編號（選填）</label>
+      <input type="text" id="company-code" placeholder="12345678">
+    </p>
+  </ng-container>
+</form>
+
+<p class="full button"><a [routerLink]="['/', path.success]">確認結帳</a></p>
+
+<!-- 表單區域結束 -->
