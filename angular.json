@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ng8-practice-web"
+    }
+  },
+  "defaultProject": "ng8-practice-web",
+  "cli": {
+    "analytics": false
+  }
 }
